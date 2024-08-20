@@ -4,7 +4,7 @@ import logoImg from "../assest/MyWebLogo.png";
 const Logo = () => {
   return (
     <>
-    <img src={logoImg} alt='Logo-img' width={100} height={70}/>
+    <img src={logoImg} alt='Logo-img' width={50} height={30}/>
     </>
   );
 }

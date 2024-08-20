@@ -5,7 +5,7 @@ import imageTobase64 from "../helpers/imagetobase64.js";
 import SummeryApi from "../common/index.js";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
+// signup page
 const Signup = () => {
   const [data, setData] = useState({
     email: "",
@@ -58,14 +58,14 @@ const Signup = () => {
         toast.error(dataApi.message);
       }
     } else {
-      console.log("please check password and confirm password");
+      toast.error("Passwords do not match");
     }
   };
 
   return (
     <section id="signup" className="flex justify-center items-center my-6 bg-gray-100 shadow-sm">
-      <div className="bg-white p-5 w-full max-w-lg mx-auto rounded-lg shadow-lg relative"> {/* Changed max-w-sm to max-w-lg */}
-        <div className="w-32 h-32 mx-auto relative overflow-hidden rounded-full">
+      <div className="bg-white p-5 w-full max-w-md mx-auto rounded-lg shadow-lg relative">
+        <div className="w-24 h-24 mx-auto relative overflow-hidden rounded-full"> 
           <img
             src={data.profilePic || loginIcon}
             alt="Profile"
@@ -73,7 +73,7 @@ const Signup = () => {
           />
           <label
             htmlFor="fileUpload"
-            className="absolute bottom-0 right-0 bg-slate-200 text-xs cursor-pointer text-center w-32 h-16 flex items-center justify-center bg-opacity-80 rounded-br-full"
+            className="absolute bottom-0 right-0 bg-slate-200 text-xs cursor-pointer text-center w-24 h-10 flex items-center justify-center bg-opacity-80 rounded-br-full"
           >
             Upload photo
             <input
@@ -180,7 +180,7 @@ const Signup = () => {
           </button>
         </form>
 
-        <p className="mt-5 text-center">
+        <p className="mt-5 text-center text-sm"> 
           Already have an account?{" "}
           <Link to="/login" className="text-blue-600 hover:text-blue-800 hover:underline">
             Login

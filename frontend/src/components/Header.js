@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 import { setUserDetails } from '../store/userSlice';
 import ROLE from '../common/role';
 import Context from '../context';
-import debounce from 'lodash.debounce'; // Import lodash debounce
+import debounce from 'lodash.debounce'; 
 import SummeryApi from '../common';
 
 const Header = () => {
@@ -62,7 +62,7 @@ const Header = () => {
       <div className='h-full container mx-auto flex items-center px-4 justify-between'>
         <div>
           <Link to={"/"}>
-            <Logo w={-70} h={-30} />
+            <Logo />
           </Link>
         </div>
 
